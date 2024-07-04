@@ -1,0 +1,94 @@
+.carousel-fade {
+  .carousel-inner {
+    overflow-y: unset;
+    overflow-x: clip;
+
+    .carousel-item {
+      padding: 0 10vw;
+      transition: 0s opacity ease;
+      -webkit-transition: 0s opacity ease;
+      -moz-transition: 0s opacity ease;
+      -ms-transition: 0s opacity ease;
+      -o-transition: 0s opacity ease;
+
+      .slide-title {
+        font-size: 75px;
+      }
+
+      .slide-brief {
+        width: 80%;
+      }
+
+      .right-side {
+        position: relative;
+        left: -200px;
+      }
+
+      .overlay {
+        position: absolute;
+        right: -5%;
+        top: -45%;
+        animation: rotateIn 5s linear infinite;
+        -webkit-animation: rotateIn 5s linear infinite;
+
+      }
+
+      .find-out-more {
+        background-color: #FF7C16;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+      }
+    }
+  }
+
+  .carousel-indicators {
+    right: unset;
+    margin-left: 10vw;
+    gap: 100px;
+
+    &::before {
+      width: 90%;
+      height: 10px;
+      content: "";
+      border-top: 5px dotted;
+      position: absolute;
+      top: 35px;
+      z-index: -1;
+      left: 5%;
+    }
+
+    button {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      opacity: 1;
+    }
+
+    .active {
+      width: 52px;
+      height: 52px;
+    }
+
+  }
+}
+
+.pe-10rem {
+  padding-right: 10rem;
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
