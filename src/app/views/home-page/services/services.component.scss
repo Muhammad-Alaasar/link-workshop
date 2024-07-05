@@ -1,0 +1,102 @@
+.services {
+  background-color: #EFEFEF;
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  &::before {
+    content: "Things We Do";
+    font-size: 180px;
+    position: absolute;
+    top: 55px;
+    left: -50px;
+    width: 600px;
+    font-weight: 600;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px #D9D9D9;
+    line-height: 140px;
+  }
+
+  .right-part {
+    width: 65%;
+    background-color: #F215B6;
+    padding: 100px;
+
+    h2 {
+      font-size: 55px;
+      color: #253776;
+    }
+  }
+
+  .left-part {
+    left: 250px;
+    top: 62.5px;
+
+    .service {
+      width: 250px;
+      height: 250px;
+
+      .details {
+        top: 145px;
+        left: 65px;
+
+        a {
+          margin-left: -30px;
+          opacity: 0;
+          bottom: -20px;
+          transition: 700ms all ease;
+          -webkit-transition: 700ms all ease;
+          -moz-transition: 700ms all ease;
+          -ms-transition: 700ms all ease;
+          -o-transition: 700ms all ease;
+        }
+
+        h3 {
+          font-size: 25px;
+          color: transparent;
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-stroke: .5px #ffffff59;
+          text-shadow: -30px 13px 0 white;
+        }
+      }
+
+      &:hover .details a {
+        opacity: 1;
+        bottom: 0;
+        transition: 700ms all ease;
+        -webkit-transition: 700ms all ease;
+        -moz-transition: 700ms all ease;
+        -ms-transition: 700ms all ease;
+        -o-transition: 700ms all ease;
+      }
+
+    }
+
+    .transformation {
+      background: linear-gradient(rgba(19, 39, 107, 0.5), rgba(19, 39, 107, 0.5)), url('../../../../assets/images/service5.png');
+    }
+
+    .envision {
+      background: linear-gradient(rgba(19, 39, 107, 0.5), rgba(19, 39, 107, 0.5)), url('../../../../assets/images/service3.png') right;
+
+    }
+
+    .dynamics {
+      background: linear-gradient(rgba(19, 39, 107, 0.5), rgba(19, 39, 107, 0.5)), url('../../../../assets/images/service4.png');
+    }
+
+    .crafty-mind {
+      background: linear-gradient(rgba(19, 39, 107, 0.5), rgba(19, 39, 107, 0.5)), url('../../../../assets/images/service1.png') 70% 100%;
+    }
+
+    .services-item {
+      background: linear-gradient(rgba(19, 39, 107, 0.5), rgba(19, 39, 107, 0.5)), url('../../../../assets/images/service2.png');
+    }
+
+    .column-n3 {
+      bottom: 125px;
+    }
+  }
+}
