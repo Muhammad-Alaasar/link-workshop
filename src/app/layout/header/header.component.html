@@ -4,7 +4,7 @@
     <div
       id="carouselExampleFade"
       class="carousel slide carousel-fade"
-      data-bs-ride="carousel"
+
     >
       <div class="carousel-indicators align-items-center">
         <button
@@ -56,7 +56,7 @@
                   'url(' +
                   '../../../assets/images/slides/line-' +
                   slide.order +
-                  '.png) no-repeat 80% 27%'
+                  '.png) no-repeat 80% 50px'
                 "
                 [ngClass]="{
                   'pe-10rem': slide.order === 1,
@@ -66,8 +66,8 @@
                 {{ slide.title }}
               </h2>
               <p class="slide-brief">{{ slide.brief }}</p>
-              <div class="d-flex gap-5 align-items-center">
-                <button class="btn find-out-more py-3 px-4">
+              <div class="d-flex gap-md-5 align-items-center">
+                <button class="btn find-out-more py-3 px-4 me-4">
                   <a
                     [href]="slide.itemUrl"
                     class="text-decoration-none text-white"
@@ -83,12 +83,12 @@
                     src="../../../assets/images/play-button.png"
                     alt="Play Demo"
                   />
-                  <span class="ps-3">Play Demo</span>
+                  <span class="ps-md-3 ps-2">Play Demo</span>
                 </a>
               </div>
             </div>
             <div class="col-12 col-sm-6 right-side">
-              <img [src]="slide.imgUrl" class="" [alt]="slide.category" />
+              <img [src]="slide.imgUrl" [alt]="slide.category" width="100%" />
             </div>
           </div>
         </div>

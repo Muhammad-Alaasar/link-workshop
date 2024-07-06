@@ -1,3 +1,9 @@
+@mixin resposive {
+  @media(max-width:600px) {
+    @content;
+  }
+}
+
 .carousel-fade {
   .carousel-inner {
     overflow-y: unset;
@@ -11,17 +17,32 @@
       -ms-transition: 0s opacity ease;
       -o-transition: 0s opacity ease;
 
+      @include resposive {
+        padding: 0 5vw;
+      }
+
       .slide-title {
-        font-size: 75px;
+        font-size: 4.7rem;
+
+        @include resposive {
+          background: url(../../../assets/images/slides/line-1.png) -90% 40px no-repeat !important;
+        }
       }
 
       .slide-brief {
         width: 80%;
+
+        @include resposive {
+          width: 100%
+        }
       }
 
       .right-side {
         position: relative;
-        left: -200px;
+
+        @include resposive {
+          left: 0;
+        }
       }
 
       .overlay {
@@ -35,11 +56,11 @@
 
       .find-out-more {
         background-color: #FF7C16;
-        border-radius: 10px;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
+        border-radius: 0.625;
+        -webkit-border-radius: 0.625;
+        -moz-border-radius: 0.625;
+        -ms-border-radius: 0.625;
+        -o-border-radius: 0.625;
       }
     }
   }
@@ -47,22 +68,22 @@
   .carousel-indicators {
     right: unset;
     margin-left: 10vw;
-    gap: 100px;
+    gap: 6.25rem;
 
     &::before {
       width: 90%;
-      height: 10px;
+      height: 0.625;
       content: "";
-      border-top: 5px dotted;
+      border-top: 0.3125rem dotted;
       position: absolute;
-      top: 35px;
+      top: 2.25rem;
       z-index: -1;
       left: 5%;
     }
 
     button {
-      width: 40px;
-      height: 40px;
+      width: 2.5rem;
+      height: 2.5rem;
       border-radius: 50%;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -72,8 +93,8 @@
     }
 
     .active {
-      width: 52px;
-      height: 52px;
+      width: 3.25rem;
+      height: 3.25rem;
     }
 
   }
@@ -81,6 +102,10 @@
 
 .pe-10rem {
   padding-right: 10rem;
+
+  @include resposive {
+    padding-right: unset;
+  }
 }
 
 @keyframes rotateIn {
