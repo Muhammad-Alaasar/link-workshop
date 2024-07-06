@@ -1,0 +1,54 @@
+<section class="top-news">
+  <h4 class="text-center fw-semibold">Media</h4>
+  <h2 class="h1 text-center mt-3 mb-5 fw-bold">Top News</h2>
+  <div class="categories d-flex gap-3 justify-content-center mb-5">
+    <button
+      *ngFor="let category of newsCategories"
+      class="btn"
+      [ngClass]="{ active: category.className == 'active' }"
+      (click)="getNews(category.id)"
+    >
+      {{ category.name }}
+    </button>
+  </div>
+  <div class="news container-fluid">
+    <div class="row row-gap-5">
+      <div *ngFor="let story of news" class="story card col-12 col-md-4 p-0">
+        <img
+          [src]="story.urlToImage"
+          class="card-img-top"
+          [alt]="story.title"
+          (error)="handleImageError($event)"
+        />
+        <div class="card-body">
+          <h5 class="card-title fw-semibold overflow-hidden mt-3 mb-4">
+            {{ story.title }}
+          </h5>
+          <!-- <p class="card-text">{{ story.description }}</p> -->
+          <p class="story-date">
+            <i class="bi bi-calendar4-week me-2"></i
+            >{{ story.publishedDate | date : "EEE dd MMM yyyy" }}
+          </p>
+          <div class="d-flex justify-content-between">
+            <button class="btn rounded-pill px-4 py-0 story-category">
+              {{ story.categoryID | categoryID : newsCategories }}
+            </button>
+            <div>
+              <span class="btn">
+                <i class="bi bi-heart"></i>
+              </span>
+              <span class="btn">
+                <i class="bi bi-share-fill"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="btn view-all d-block mx-auto my-5 py-3 px-5 text-white rounded-3"
+    >
+      View All News
+    </button>
+  </div>
+</section>

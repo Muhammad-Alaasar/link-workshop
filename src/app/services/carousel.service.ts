@@ -47,6 +47,6 @@ export class CarouselService {
   constructor() {}
 
   getSlides(): Observable<Slide[]> {
-    return of(this.slides);
+    return of<Slide[]>(this.slides);
   }
 }

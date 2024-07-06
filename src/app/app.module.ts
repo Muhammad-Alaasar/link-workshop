@@ -8,6 +8,9 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { NavbarComponent } from './layout/header/navbar/navbar.component';
 import { HomePageComponent } from './views/home-page/home-page.component';
 import { ServicesComponent } from './views/home-page/services/services.component';
+import { TopNewsComponent } from './views/home-page/top-news/top-news.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CategoryIDPipe } from './pipes/category-id.pipe';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,12 @@ import { ServicesComponent } from './views/home-page/services/services.component
     FooterComponent,
     NavbarComponent,
     HomePageComponent,
-    ServicesComponent
+    ServicesComponent,
+    TopNewsComponent,
+    CategoryIDPipe,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
