@@ -1,27 +1,77 @@
-# LinkWorkshop
+# Link workshop
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+##### by Muhammad Al-Aasar
 
-## Development server
+> The task shall provide a Homepage and News for the internet users to be able to view and list of News
+> with filtering by category.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+#
 
-## Code scaffolding
+### Technologies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+###
 
-## Build
+-   Angular
+-   JavaScript
+-   RXJS
+-   SCSS
+-   HTML
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+#
 
-## Running unit tests
+### Steps
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+###
 
-## Running end-to-end tests
+-   Analyze the project and select the dependencies.
+-   Create an Angular project and install dependencies (Bootstrap, Bootstrap-Icons, Prettier).
+-   Extract asset files from the XD file.
+-   Slice the project into reusable components.
+-   Create a project layout to be displayed on all project pages.
+-   Create a Header Section:
+    -   Create a Nav component.
+    -   Use a Bootstrap carousel for slides.
+    -   Create a carousel service for a local API and change the imgUrl property value.
+    -   Create a reusable component for carousel items.
+-   Create a Services section.
+-   Create a Top News Section:
+    -   Create a news service to get data of categories and news from API links.
+    -   Create a reusable component for each news item.
+    -   Implement functionality to filter the news.
+-   Create a Footer section.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+#
 
-## Further help
+### Usage
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+###
+
+Open this URL:
+
+https://link-workshop.vercel.app/
+
+OR Download or Clone it and do this steps:-
+
+#####
+
+First Step:
+
+```sh
+npm install
+```
+
+OR
+
+```sh
+npm i
+```
+
+Second Step:
+
+```sh
+localhost:4200
+```
+
+## License
+
+**Free Software, Yeah!**
