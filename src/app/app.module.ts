@@ -11,20 +11,24 @@ import { ServicesComponent } from './views/home-page/services/services.component
 import { TopNewsComponent } from './views/home-page/top-news/top-news.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CategoryIDPipe } from './pipes/category-id.pipe';
+import { StoryComponent } from './views/home-page/top-news/story/story.component';
+import { CarouselItemComponent } from './layout/header/carousel-item/carousel-item.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    NavbarComponent,
-    HomePageComponent,
-    ServicesComponent,
-    TopNewsComponent,
-    CategoryIDPipe,
-  ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-  providers: [],
-  bootstrap: [AppComponent],
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        FooterComponent,
+        NavbarComponent,
+        HomePageComponent,
+        ServicesComponent,
+        TopNewsComponent,
+        CategoryIDPipe,
+        StoryComponent,
+        CarouselItemComponent,
+    ],
+    imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+    providers: [],
+    bootstrap: [AppComponent],
 })
 export class AppModule {}

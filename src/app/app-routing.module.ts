@@ -6,7 +6,7 @@ import { HomePageComponent } from './views/home-page/home-page.component';
 const routes: Routes = [{ path: '', component: HomePageComponent }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule],
 })
 export class AppRoutingModule {}

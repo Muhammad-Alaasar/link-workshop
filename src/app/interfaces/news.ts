@@ -1,24 +1,24 @@
 export interface News {
-  News: Story[];
+    News: Story[];
 }
 
 export interface Story {
-  id: string;
-  title: string;
-  content: string;
-  categoryID: string;
-  urlToImage: string;
-  description: string;
-  publishedDate: string;
-  showOnHomepage: string;
+    id: string;
+    title: string;
+    content: string;
+    categoryID: string;
+    urlToImage: string;
+    description: string;
+    publishedDate: string;
+    showOnHomepage: string;
 }
 
 export interface NewsCategories {
-  newsCategory: Category[];
+    newsCategory: Category[];
 }
 
 export interface Category {
-  id: number;
-  name: string;
-  className?: string;
+    id: number;
+    name: string;
+    className?: string;
 }

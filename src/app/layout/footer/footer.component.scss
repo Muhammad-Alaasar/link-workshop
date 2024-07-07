@@ -1,28 +1,28 @@
 footer {
-  padding: 0 10vw;
+    padding: 0 10vw;
 
-  .footer-logo {
-    img {
-      width: 170px;
+    .footer-logo {
+        img {
+            width: 10.625rem;
+        }
     }
-  }
 
-  .social-links {
-    li {
-      width: 41px;
-      height: 41px;
-      box-shadow: 0px 2px 20px #0000001A;
-      color: black;
+    li,
+    h6 {
+        color: #5e6282;
     }
-  }
 
-  li,
-  h6 {
-    color: #5E6282;
-  }
+    .social-links {
+        li {
+            width: 2.5625rem;
+            height: 2.5625rem;
+            box-shadow: 0 2px 1.25rem #0000001a;
+            color: black;
+        }
+    }
 
-  .footer-logo+h6,
-  h6.copyrights {
-    font-size: 14px;
-  }
+    .footer-logo + h6,
+    h6.copyrights {
+        font-size: 0.875rem;
+    }
 }

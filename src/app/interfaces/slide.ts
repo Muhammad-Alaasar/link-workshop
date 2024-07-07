@@ -1,11 +1,11 @@
 export interface Slide {
-  id: number;
-  category: string;
-  title: string;
-  brief: string;
-  colorCode: string;
-  imgUrl: string;
-  itemUrl: string;
-  videoUrl: string;
-  order: number;
+    id: number;
+    category: string;
+    title: string;
+    brief: string;
+    colorCode: string;
+    imgUrl: string;
+    itemUrl: string;
+    videoUrl: string;
+    order: number;
 }

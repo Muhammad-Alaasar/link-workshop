@@ -1,13 +1,17 @@
 @mixin resposive {
-  @media(max-width:600px) {
-    @content;
-  }
+    @media (max-width: 600px) {
+        @content;
+    }
 }
 
 .container-fluid {
-  padding: 0 10vw;
+    padding: 0 10vw;
 
-  @include resposive {
-    padding: 0 5vw;
-  }
+    @include resposive {
+        padding: 0 5vw;
+    }
+
+    select {
+        background-color: transparent;
+    }
 }

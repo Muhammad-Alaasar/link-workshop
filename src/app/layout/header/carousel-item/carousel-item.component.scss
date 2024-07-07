@@ -1,0 +1,76 @@
+@mixin resposive {
+    @media (max-width: 600px) {
+        @content;
+    }
+}
+
+.slide {
+    .slide-title {
+        font-size: 4.7rem;
+
+        @include resposive {
+            background-position: 5.625rem 2.5rem !important;
+        }
+    }
+
+    .slide-brief {
+        width: 80%;
+
+        @include resposive {
+            width: 100%;
+        }
+    }
+
+    .right-side {
+        position: relative;
+
+        @include resposive {
+            left: 0;
+        }
+    }
+
+    .find-out-more {
+        background-color: #ff7c16;
+        border-radius: 0.625rem;
+        -webkit-border-radius: 0.625rem;
+        -moz-border-radius: 0.625rem;
+        -ms-border-radius: 0.625rem;
+        -o-border-radius: 0.625rem;
+    }
+}
+
+.overlay {
+    position: absolute;
+    right: -5%;
+    top: -45%;
+    animation: rotateIn 5s linear infinite;
+    -webkit-animation: rotate-in 5s linear infinite;
+
+    @include resposive {
+        top: 70%;
+    }
+
+    img {
+        @include resposive {
+            width: 100%;
+        }
+    }
+}
+
+.pe-10rem {
+    padding-right: 10rem;
+
+    @include resposive {
+        padding-right: unset;
+    }
+}
+
+@keyframes rotate-in {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

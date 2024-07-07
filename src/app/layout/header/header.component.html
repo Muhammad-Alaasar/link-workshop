@@ -1,98 +1,43 @@
 <header class="open-sans-font">
-  <app-navbar></app-navbar>
-  <section>
-    <div
-      id="carouselExampleFade"
-      class="carousel slide carousel-fade"
-
-    >
-      <div class="carousel-indicators align-items-center">
-        <button
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide-to="0"
-          class="slide-1 active"
-          aria-current="true"
-          aria-label="Slide 1"
-          style="background-color: #f215b6"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide-to="1"
-          class="slide-2"
-          aria-label="Slide 2"
-          style="background-color: #a6e51c"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleFade"
-          data-bs-slide-to="2"
-          class="slide-3"
-          aria-label="Slide 3"
-          style="background-color: #ff7c16"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div
-          class="carousel-item container-fluid"
-          *ngFor="let slide of slides; index as i"
-          [ngClass]="{ active: i === 0 }"
-        >
-          <div class="overlay animated-div">
-            <img
-              [src]="'../../../assets/images/slides/bg-' + slide.order + '.png'"
-              alt=""
-            />
-          </div>
-          <div class="row align-items-center">
-            <div class="col-12 col-sm-6 d-flex flex-column gap-4">
-              <h4 [style.color]="'#' + slide.colorCode" class="fw-bold">
-                {{ slide.category | uppercase }}
-              </h4>
-              <h2
-                class="slide-title fw-bold"
-                [style.background]="
-                  'url(' +
-                  '../../../assets/images/slides/line-' +
-                  slide.order +
-                  '.png) no-repeat 80% 50px'
-                "
-                [ngClass]="{
-                  'pe-10rem': slide.order === 1,
-                  'pe-5': slide.order !== 1
-                }"
-              >
-                {{ slide.title }}
-              </h2>
-              <p class="slide-brief">{{ slide.brief }}</p>
-              <div class="d-flex gap-md-5 align-items-center">
-                <button class="btn find-out-more py-3 px-4 me-4">
-                  <a
-                    [href]="slide.itemUrl"
-                    class="text-decoration-none text-white"
-                    >Find out more</a
-                  >
-                </button>
-
-                <a
-                  [href]="slide.videoUrl"
-                  class="text-decoration-none text-black"
+    <app-navbar></app-navbar>
+    <section>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators align-items-center">
+                <button
+                    type="button"
+                    data-bs-target="#carouselExampleFade"
+                    data-bs-slide-to="0"
+                    class="slide-1 active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                    style="background-color: #f215b6"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselExampleFade"
+                    data-bs-slide-to="1"
+                    class="slide-2"
+                    aria-label="Slide 2"
+                    style="background-color: #a6e51c"
+                ></button>
+                <button
+                    type="button"
+                    data-bs-target="#carouselExampleFade"
+                    data-bs-slide-to="2"
+                    class="slide-3"
+                    aria-label="Slide 3"
+                    style="background-color: #ff7c16"
+                ></button>
+            </div>
+            <div class="carousel-inner">
+                <app-carousel-item
+                    class="carousel-item container-fluid"
+                    *ngFor="let slide of slides; index as i"
+                    [ngClass]="{ active: i === 0 }"
+                    [slide]="slide"
                 >
-                  <img
-                    src="../../../assets/images/play-button.png"
-                    alt="Play Demo"
-                  />
-                  <span class="ps-md-3 ps-2">Play Demo</span>
-                </a>
-              </div>
+                </app-carousel-item>
             </div>
-            <div class="col-12 col-sm-6 right-side">
-              <img [src]="slide.imgUrl" [alt]="slide.category" width="100%" />
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 </header>
