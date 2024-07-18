@@ -53,7 +53,7 @@
     }
 
     .left-part {
-        left: 15.625rem;
+        left: 15rem;
         top: 3.90625rem;
 
         @include resposive {
@@ -62,8 +62,8 @@
         }
 
         .service {
-            width: 15.6rem;
-            height: 15.6rem;
+            width: 15rem;
+            height: 15rem;
 
             @include resposive {
                 width: 13.625rem;
