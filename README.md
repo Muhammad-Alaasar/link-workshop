@@ -69,8 +69,12 @@ npm i
 Second Step:
 
 ```sh
-localhost:4200
+ng s
 ```
+
+Open this URL:
+
+localhost:4200
 
 ## License
 
